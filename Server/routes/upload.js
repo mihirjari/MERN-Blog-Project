@@ -18,7 +18,7 @@ const fileToUpload = multer({storage: storageConfig});
 
 // Sending uploaded photo to the local folder with URL http://localhost:5000/api/file
 router.post("/", fileToUpload.single("file"), (req, res) => {
-    res.status(200).json("Your File has been uploaded successfully!");
+    return res.status(200).json("Your File has been uploaded successfully!");
 });
 
 module.exports = router;
