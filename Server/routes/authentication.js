@@ -22,7 +22,7 @@ router.post("/signup", async (req, res) => {
             const userSaved = await registeredUser.save();
 
             // Giving Acknowledgement about success
-            res.status(200).json(userSaved);
+            res.status(200).json("User has been registered successfully!");
         }else{
 
             res.status(500).json("Please enter your information in the mandatory fields");
@@ -47,7 +47,9 @@ router.post("/signin", async (req, res) => {
         });
 
         if(!foundUser){
-            res.status(400).json("Wrong credentials! Please try again.");
+
+            return res.status(400).json("Wrong credentials! Please try again.");
+             
         }
 
         // Matching passwords
@@ -56,7 +58,8 @@ router.post("/signin", async (req, res) => {
         // If passwords not matched
         if(!isValidated){
 
-            res.status(400).json("Wrong credentials! Please try again.");
+            return res.status(400).json("Wrong Password! Please try again.");
+            
         }
 
         // If User Login is completely validated
@@ -64,7 +67,7 @@ router.post("/signin", async (req, res) => {
         res.status(200).json(otherProperties);
 
     }catch(error){
-        res.status(500).json(error);
+       return res.status(500).json(error);
     }
 
 });
