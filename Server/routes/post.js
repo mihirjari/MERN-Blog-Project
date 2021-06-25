@@ -11,7 +11,7 @@ router.get("/get/:id", async (req, res) => {
         const getPost = await postModel.findById(req.params.id);
         res.status(200).json(getPost);
     }catch(error){
-        res.status(500).json(error);
+        return res.status(500).json(error);
     }
 
 });
@@ -46,7 +46,7 @@ router.get("/all", async (req, res) => {
     res.status(200).json(postsFetched);
 
     }catch(error){
-        res.status(500).json(error);
+        return res.status(500).json(error);
     }
 });
 
@@ -58,11 +58,11 @@ router.post("/new", async (req, res) => {
     try{
 
         const saveNewPost = await newPost.save();
-        res.status(200).json(saveNewPost);
+        return res.status(200).json("Your post has been saved.");
 
     }catch(error){
 
-        res.status(500).json(error);
+        return res.status(500).json(error);
     }
 });
 
@@ -82,18 +82,18 @@ router.put("/update/:id", async (req, res) => {
                     const updatePost = await postModel.findByIdAndUpdate(req.params.id,
                          {$set: req.body},  // Providing what data to update
                          {new: true}); // setting new to true so that server responds with the updated data
-                    res.status(200).json(updatePost);
+                    return res.status(200).json(updatePost);
 
                 }catch(error){
-                    res.status(500).json(error);
+                    return res.status(500).json(error);
                 }
 
             }else{
-                res.status(401).json("You are only allowed to update posts published by you!");
+                return res.status(401).json("You are only allowed to update posts published by you!");
             }
     }catch(error){
 
-        res.status(500).json(error);
+        return res.status(500).json(error);
     }
 });
 
@@ -110,17 +110,17 @@ router.delete("/delete/:id", async (req, res) => {
             try{
                 // Will delete the post found
                 await postToDelete.delete();
-                res.status(200).json("Your Post has been deleted!");
+                return res.status(200).json("Your Post has been deleted!");
 
             }catch(error){
-                res.status(500).json(error);
+                return res.status(500).json(error);
             }
         }else{
             console.log("inside else");
-            res.status(401).json("You are only allowed to delete post published by you!");
+            return res.status(401).json("You are only allowed to delete post published by you!");
         }
     }catch(error){
-        res.status(500).json(error);
+        return res.status(500).json(error);
     }
 });
 
