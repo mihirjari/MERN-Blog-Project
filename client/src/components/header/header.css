@@ -1,0 +1,44 @@
+.header{
+    margin-top: 60px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.headerTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lora", serif;
+    color: #444;
+}
+.headerTitleSmall{
+    position: absolute;
+    top: 15%;
+    font-size: 20px;
+}
+
+.headerTitleLarge{
+    position: absolute;
+    top: 15%;
+    font-size: 100px;
+}
+.headerImage{
+    width: 100%;
+    height:fit-content;
+    margin-top: 80px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 600px){
+
+    .headerTitleSmall{
+       
+        font-size: 10px;
+    }
+    .headerTitleLarge{
+        font-size: 50px;
+    }
+   
+}

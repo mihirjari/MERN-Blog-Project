@@ -1,0 +1,85 @@
+#fileInput{
+    display: none;
+}
+
+.write{
+    padding-top:50px;
+}
+
+.writeTitleImage{
+    margin-left: 150px;
+    width: 70vw;
+    height: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.writeForm{
+    position: relative;
+}
+.formGroup{
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+.blogIcon{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: rgb(129, 125, 125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+.blogIcon:hover{
+    transform: scale(1.5);
+}
+.writeInput{
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+}
+
+.writeInput::placeholder{
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+}
+.writeInput:focus{
+    outline-style: none;
+}
+.writeText{
+    width: 70vw;
+    height: 60vh;
+    font-family: inherit;
+    font-size: 25px;
+}
+
+.categoryInput{
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.submitBtn{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background-color: #b39452;
+    color: white;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform .2s;
+}
+
+.submitBtn:hover{
+    transform: scale(1.2);
+}

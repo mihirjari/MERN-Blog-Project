@@ -50,7 +50,7 @@ router.get("/all", async (req, res) => {
     }
 });
 
-// Create Post when user is logged in
+// Create Post when user is logged in  
 router.post("/new", async (req, res) => {
 
     const newPost = new postModel(req.body);
@@ -59,7 +59,7 @@ router.post("/new", async (req, res) => {
 
         const saveNewPost = await newPost.save();
         return res.status(200).json("Your post has been saved.");
-
+        
     }catch(error){
 
         return res.status(500).json(error);
@@ -116,7 +116,7 @@ router.delete("/delete/:id", async (req, res) => {
                 return res.status(500).json(error);
             }
         }else{
-            console.log("inside else");
+           
             return res.status(401).json("You are only allowed to delete post published by you!");
         }
     }catch(error){

@@ -1,0 +1,102 @@
+.settings{
+    display: flex;
+}
+.wrapper{
+    flex: 9;
+}
+.settingsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px;
+}
+.update{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: "Varela Round", sans-serif;
+}
+.delete{
+    background-color: #d9534f;
+    font-family: "Varela Round", sans-serif;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.settingsForm{
+    display: flex;
+    flex-direction: column;
+}
+.pp{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pp > img{
+    height: 70px;
+    width: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.ppIcon{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: white;
+    background-color: lightcoral;
+    cursor: pointer;
+}
+.settingsForm > label{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.settingInput{
+    width: 30%;
+    padding: 20px;
+    outline-style: none;
+    
+}
+
+#fileInput{
+    width: 30%;
+}
+
+.settingsForm > input {
+
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid gray;
+
+}
+.formBtn{
+  align-self: center;
+  width: auto;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  background-color: #b39452;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s;
+}
+.formBtn:hover{
+    transform: scale(1.1);
+}

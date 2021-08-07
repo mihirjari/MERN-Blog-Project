@@ -1,0 +1,82 @@
+.aboutTitle{
+    font-family: "Varela Round", sans-serif;
+    padding: 100px 120px;
+    text-align: center;
+    font-size: 4rem;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-radius: 10px;
+    
+    
+}
+.titleImage{
+   background: url("https://images.pexels.com/photos/462024/pexels-photo-462024.jpeg?cs=srgb&dl=pexels-pixabay-462024.jpg&fm=jpg");
+   height: 600px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   width: auto;
+   margin: 20px 0px;
+   position: relative;
+}
+
+
+
+#paragraph::first-letter{
+    font-size: 50px;
+}
+#paraTitle{
+    color: rgb(85, 84, 84);
+    font-family: "Varela Round", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    
+}
+.secondImage{
+    height: 500px;
+    background: url("https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?cs=srgb&dl=pexels-pixabay-206359.jpg&fm=jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px 0;
+    border-radius: 10px;
+    position: relative;
+}
+.secondImageTitle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 100px 70px;
+    font-family: "Varela Round", sans-serif;
+    color: white;
+    font-size: 35px;
+    background-color: white;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(3px);
+}
+
+.formContainer{
+    
+    width: 70%;
+    margin: 0 auto;
+    height: 70vh;
+    text-align: center;
+   
+}
+.formTag{
+    font-family: "Varela Round", sans-serif;
+    font-size: 2rem;
+}
+@media only screen and (max-width: 600px){
+
+    #paragraph{
+        text-align: justify;
+    }
+}

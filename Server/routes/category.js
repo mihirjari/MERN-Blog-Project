@@ -15,7 +15,7 @@ router.post("/addCategory", async (req, res) => {
     }
 });
 
-// Get Categories using GET Request
+// Get Categories using GET Request http://localhost:5000/api/categories/getCategories
 router.get("/getCategories", async (req, res) => {
 
     try{

@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
-const mongoDBUrl = "mongodb+srv://mihir:alxMDciePVrXjfkt@cluster0.fdji1.mongodb.net/BlogDB?retryWrites=true&w=majority";
+require('dotenv').config();
+const mongoDBUrl = process.env.MONGO_URL;
 
-mongoose.connect(mongoDBUrl, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
+mongoose.connect(mongoDBUrl, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: true});
 
 mongoose.connection.on('connected', ()=>{
 

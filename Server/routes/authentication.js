@@ -5,7 +5,8 @@ const bcrypt = require("bcrypt");
 // User Signup process using POST Request 
 router.post("/signup", async (req, res) => {
 
-    try{
+    try{   
+        
 
         if(req.body.username && req.body.password){
             //Encrypting user password from server side 
@@ -22,15 +23,15 @@ router.post("/signup", async (req, res) => {
             const userSaved = await registeredUser.save();
 
             // Giving Acknowledgement about success
-            res.status(200).json("User has been registered successfully!");
+            return res.status(200).json("User has been registered successfully!");
         }else{
 
-            res.status(500).json("Please enter your information in the mandatory fields");
+            return res.status(500).json("Please enter your information in the mandatory fields");
         }
-
+        
     }catch(error){
 
-        res.status(500).json(error);
+        return res.status(500).json(error);
     }
 
 });

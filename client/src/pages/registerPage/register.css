@@ -1,0 +1,86 @@
+
+.register{
+    font-family: "Varela Round", sans-serif;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images.pexels.com/photos/2832061/pexels-photo-2832061.jpeg?cs=srgb&dl=pexels-felix-mittermeier-2832061.jpg&fm=jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+.registerForm{
+   
+    backdrop-filter: blur(2px);
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.3);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 150px;
+    border-radius: 7px;
+}
+
+.registerForm > label{
+    margin: 10px 0;
+    color: black;
+}
+
+.registerInput{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    outline-style: none;
+    border-radius: 10px;
+    
+}
+.registerInput:focus{
+    outline: none;
+}
+.title{
+    font-size: 50px;
+    color: black;
+}
+#registerBtn{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #5cB85C;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    transition: transform .2s;
+    text-align: center;
+}
+#registerBtn:hover{
+    transform: scale(1.1);
+}
+#loginBtn{
+    font-family: "Varela Round", sans-serif;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #0275D8;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    transition: transform .2s;
+    cursor: pointer;
+}
+#loginBtn:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px){
+ 
+    .title{
+        font-size: 30px;
+    }
+}

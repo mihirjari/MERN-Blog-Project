@@ -29,12 +29,25 @@ router.put("/:id", async (req, res) => {
         if(req.body.password){
             const saltValue = await bcrypt.genSalt(10);
             req.body.password = await bcrypt.hash(req.body.password, saltValue);
+        }else{
+            return res.status(400).json("Password field cannot be empty.");
         }
         try{
 
+            const userToUpdate = {
+                username: req.body.username,
+                email: req.body.email,
+                password: req.body.password
+            };
+            if(req.body.profilePicture){
+                userToUpdate.profilePicture = req.body.profilePicture;
+            }
+
+            
+
             // Updating user's password in Database
             const updatedUserInfo = await userModel.findByIdAndUpdate(req.params.id, {
-                $set: req.body  //Method used to set updated user information
+                $set: userToUpdate  //Method used to set updated user information
             }, {new: true /*To see new updated values in MongoDB */});
             return res.status(200).json(updatedUserInfo);
         }catch(error){

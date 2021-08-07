@@ -1,0 +1,81 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 3;
+    height: fit-content;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    
+}
+p{
+  font-family: "Varela Round", sans-serif;
+
+}
+
+.sidebarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebarTitle {
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top: solid 1px #757474;
+    border-bottom: solid 1px #757474;
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+    font-size: 12px;
+    line-height: 19px;
+    color: #222222;
+    font-weight: 600;
+  }
+  
+  .sidebarItem > img {
+    margin-top: 15px;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .sidebarItem > p {
+    padding: 30px;
+  }
+  
+  .sidebarList {
+    list-style: circle;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+ 
+  
+  
+  .sidebarListItem {
+    list-style-type: circle;
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: "Varela Round", sans-serif;
+
+  }
+  
+  .socialSidebar {
+    margin-top: 15px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .sidebarIcon {
+    font-size: 25px;
+    margin-left: 10px;
+  }
